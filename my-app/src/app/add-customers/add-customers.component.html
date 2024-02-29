@@ -1,0 +1,69 @@
+<form (ngSubmit)="onSubmit()" #customerForm="ngForm" class="addForm">
+  <div>
+    <label for="name">Name:</label>
+    <input
+      type="text"
+      id="name"
+      name="name"
+      [(ngModel)]="customer.name"
+      required
+      #name="ngModel"
+    />
+    <div *ngIf="name.invalid && name.touched" class="error-message">
+      Name is required.
+    </div>
+  </div>
+  <div>
+    <label for="email">Email:</label>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      [(ngModel)]="customer.email"
+      required
+      #email="ngModel"
+    />
+  </div>
+  <div *ngIf="!email.valid && email.touched" class="error-message">
+    Email is required and must be a valid email address.
+  </div>
+  <div>
+    <label for="phoneNumber">Phone Number:</label>
+    <input
+      type="tel"
+      id="phoneNumber"
+      name="phoneNumber"
+      [(ngModel)]="customer.phoneNumber"
+      required
+      #phoneNumber="ngModel"
+    />
+    <div
+      *ngIf="phoneNumber.invalid && phoneNumber.touched"
+      class="error-message"
+    >
+      Phone number is required and must be a valid phone number.
+    </div>
+  </div>
+  <div>
+    <label for="address">Address:</label>
+    <textarea
+      id="address"
+      name="address"
+      [(ngModel)]="customer.address"
+      required
+      #address="ngModel"
+    ></textarea>
+    <div *ngIf="address.invalid && address.touched" class="error-message">
+      Address is required.
+    </div>
+  </div>
+  <button
+    type="submit"
+    [ngClass]="{
+      'invalid-button': !customerForm.valid
+    }"
+    [disabled]="!customerForm.valid"
+  >
+    Add Customer
+  </button>
+</form>

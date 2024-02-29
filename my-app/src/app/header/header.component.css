@@ -1,0 +1,21 @@
+header {
+  background-color: #333;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.active-link {
+  color: #79abdf;
+}

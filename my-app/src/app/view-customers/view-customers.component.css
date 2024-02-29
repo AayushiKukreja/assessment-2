@@ -1,0 +1,65 @@
+.container {
+  padding: 20px;
+}
+
+.customer-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.customer {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.customer-details {
+  margin-bottom: 15px;
+}
+
+.customer-details p {
+  margin: 0;
+}
+
+.customer-details .name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.customer-details .email,
+.customer-details .phone,
+.customer-details .address {
+  color: #666;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.actions a,
+.actions button {
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.actions a {
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+}
+
+.actions button {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+}
+
+h2 {
+  margin-left: 20px;
+}

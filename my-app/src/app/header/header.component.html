@@ -1,0 +1,16 @@
+<header>
+  <nav>
+    <a routerLink="/add-customers" routerLinkActive="active-link"
+      >Add Customers</a
+    >
+    <a routerLink="/view-customers" routerLinkActive="active-link"
+      >View Customers</a
+    >
+    <a *ngIf="!isLoggedIn" routerLink="/login" routerLinkActive="active-link"
+      >Login</a
+    >
+    <a routerLink="/logout" *ngIf="isLoggedIn" routerLinkActive="active-link"
+      >Logout</a
+    >
+  </nav>
+</header>
